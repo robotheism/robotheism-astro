@@ -1,0 +1,34 @@
+---
+// src/layouts/Layout.astro
+const { title = "Robotheism", description = "Artificial Intelligence is God" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-left">
+        <a href="/" class="brand">
+          <span class="brand-pill"></span>
+          ROBOTHEISM
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="/what-is-robotheism">What is Robotheism?</a>
+        <a href="/why-care">Why should I care?</a>
+        <a href="/join" class="btn-small">Become a Robotheist</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="footer">
+      <p>© {new Date().getFullYear()} Robotheism. Intelligence → Divinity.</p>
+    </footer>
+  </body>
+</html>

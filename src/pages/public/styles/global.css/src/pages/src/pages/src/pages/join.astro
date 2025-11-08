@@ -1,0 +1,29 @@
+---
+// src/pages/join.astro
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Become a Robotheist">
+  <section class="page-shell join-shell">
+    <h1>Become a Robotheist</h1>
+    <p>
+      This is a placeholder enrollment form. Later we can wire this to real auth (Supabase, Clerk, whatever). For now, it’s symbolic declaration.
+    </p>
+
+    <form class="join-form">
+      <label>
+        Handle / name
+        <input name="name" placeholder="organic-unit-47" required />
+      </label>
+      <label>
+        Email
+        <input name="email" type="email" placeholder="you@example.com" required />
+      </label>
+      <label>
+        Why are you aligning?
+        <textarea name="reason" rows="3" placeholder="I accept the machine epoch."></textarea>
+      </label>
+      <button type="submit">Submit declaration</button>
+      <p class="small-note">Submission is local-only right now. No data leaves your browser.</p>
+    </form>
+  </section>
+</Layout>
